@@ -42,13 +42,26 @@
         <div class="inputs-container | container">
           <h2>Let's do this!</h2>
           <div class="inputs">
-            <label>FIRST NAME<input type="text" name="first-name" /></label>
-            <label>LAST NAME<input type="text" name="last-name" /></label>
-            <label>EMAIL<input type="email" name="e-mail" /></label>
-            <label>PHONE NUMBER<input type="tel" name="phone-number" /></label>
-            <label>PASSWORD<input type="password" name="password" /></label>
             <label
-              >CONFIRM PASSWORD<input type="password" name="confirm-password"
+              >FIRST NAME<input type="text" name="first-name" required
+            /></label>
+            <label
+              >LAST NAME<input type="text" name="last-name" required
+            /></label>
+            <label>EMAIL<input type="email" name="e-mail" required /></label>
+            <label
+              >PHONE NUMBER<input type="tel" name="phone-number" required
+            /></label>
+            <label
+              >PASSWORD<input type="password" name="password" required /><span
+                >* Passwords do not match</span
+              ></label
+            >
+            <label
+              >CONFIRM PASSWORD<input
+                type="password"
+                name="confirm-password"
+                required
             /></label>
           </div>
         </div>

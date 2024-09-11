@@ -7,6 +7,7 @@
   /* COLORS */
   --clr-neutral-100: #e5e7eb;
   --clr-primary: #596d48;
+  --clr-red: rgb(209, 24, 24);
 
   /* GAPS */
   --top-padding: 12rem;
@@ -60,10 +61,8 @@ button {
 
 section {
   color: var(--clr-neutral-100);
-  background-color: red;
   position: relative;
-  height: 100svh;
-  /* height: 100%; */
+  min-height: 100svh;
   width: 37vw;
   overflow: hidden;
 }
@@ -88,7 +87,7 @@ section .logo {
 section .bg-image {
   display: block;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
 
@@ -116,6 +115,7 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  padding-block: 1rem;
 }
 
 .copy {
@@ -159,6 +159,27 @@ form .inputs-container {
     font-size: var(--fs-small);
     font-weight: bold;
     letter-spacing: 0.05rem;
+  }
+}
+
+label span {
+  visibility: hidden;
+  font-weight: normal;
+  letter-spacing: initial;
+  color: var(--clr-red);
+}
+
+input:not([type="submit"]) {
+  &:focus {
+    outline: 1px solid rgb(0, 85, 255);
+    box-shadow: 0.1rem 0.2rem 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+input[type="password"]:user-invalid {
+  outline: 1px solid var(--clr-red);
+  & + span {
+    visibility: visible;
   }
 }
 
