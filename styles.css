@@ -7,6 +7,7 @@
   /* COLORS */
   --clr-neutral-100: #e5e7eb;
   --clr-primary: #596d48;
+  --clr-primary-hover: #607c48;
   --clr-red: rgb(209, 24, 24);
 
   /* GAPS */
@@ -37,6 +38,10 @@ a {
   color: var(--clr-primary);
   text-decoration: none;
   font-weight: bold;
+  &:hover {
+    color: var(--clr-primary-hover);
+    text-decoration: underline;
+  }
 }
 
 p {
@@ -53,10 +58,20 @@ h2 {
 }
 
 button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: var(--clr-primary);
+  border: none;
   &:hover {
     cursor: pointer;
+    background-color: var(--clr-primary-hover);
+    transition: 100ms;
   }
 }
+
 /* LEFT SIDE ----------------------------------- */
 
 section {
@@ -92,6 +107,7 @@ section .bg-image {
 }
 
 section .photo-credits {
+  color: var(--clr-neutral-100);
   width: 100%;
   position: absolute;
   display: flex;
@@ -101,9 +117,12 @@ section .photo-credits {
   font-size: var(--fs-small);
   text-align: center;
   & a {
-    color: white;
+    color: inherit;
     font-weight: normal;
     text-decoration: underline;
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -177,13 +196,6 @@ input:not([type="submit"]) {
   }
 }
 
-/* input[type="password"]:user-invalid {
-  outline: 1px solid var(--clr-red);
-  & + span {
-    visibility: visible;
-  }
-} */
-
 input[type="password"][aria-invalid="true"] {
   outline: 1px solid var(--clr-red);
   & + span {
@@ -193,15 +205,6 @@ input[type="password"][aria-invalid="true"] {
 
 .button-container {
   padding-block: 2rem;
-  & button {
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    color: white;
-    background-color: var(--clr-primary);
-    border: none;
-  }
 }
 
 /* UTILITY --------------------------------------- */
