@@ -99,6 +99,7 @@ section .photo-credits {
   align-items: center;
   bottom: 1rem;
   font-size: var(--fs-small);
+  text-align: center;
   & a {
     color: white;
     font-weight: normal;
@@ -176,7 +177,14 @@ input:not([type="submit"]) {
   }
 }
 
-input[type="password"]:user-invalid {
+/* input[type="password"]:user-invalid {
+  outline: 1px solid var(--clr-red);
+  & + span {
+    visibility: visible;
+  }
+} */
+
+input[type="password"][aria-invalid="true"] {
   outline: 1px solid var(--clr-red);
   & + span {
     visibility: visible;
