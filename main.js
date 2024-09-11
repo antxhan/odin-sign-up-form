@@ -16,7 +16,7 @@ function setValid() {
 
 PASSWORD_INPUT_1.addEventListener("blur", (e) => {
   const inputValue = e.target.value;
-  if (!PASSWORD_INPUT_2.value && !inputValue) {
+  if (!PASSWORD_INPUT_2.value) {
     setValid();
   } else if (PASSWORD_INPUT_2.value !== inputValue) {
     setInvalid();
