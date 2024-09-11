@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <img src="assets/logo.png" alt="The Odin Project Logo" class="logo" />
+        <h1>Odin</h1>
+      </div>
+      <img
+        src="assets/bg.jpg"
+        alt="Green leaf plant in close up photography"
+        class="bg-image"
+        draggable="false"
+      />
+      <div class="photo-credits">
+        <p>
+          Photo by Halie West on
+          <a
+            href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </section>
+    <main>
+      <div class="copy | container">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. <br />
+          Sign up <em>now</em> to get started.
+        </p>
+        <br />
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form action="/sign-up" method="POST">
+        <div class="inputs-container | container">
+          <h2>Let's do this!</h2>
+          <div class="inputs">
+            <label>FIRST NAME<input type="text" name="first-name" /></label>
+            <label>LAST NAME<input type="text" name="last-name" /></label>
+            <label>EMAIL<input type="email" name="e-mail" /></label>
+            <label>PHONE NUMBER<input type="tel" name="phone-number" /></label>
+            <label>PASSWORD<input type="password" name="password" /></label>
+            <label
+              >CONFIRM PASSWORD<input type="password" name="confirm-password"
+            /></label>
+          </div>
+        </div>
+        <div class="button-container | container">
+          <button type="submit">Create Account</button>
+        </div>
+      </form>
+      <div class="container">
+        <p>Already have an account? <a href="/sign-in">Log in</a></p>
+      </div>
+    </main>
+  </body>
+</html>
