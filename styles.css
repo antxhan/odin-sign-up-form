@@ -87,6 +87,11 @@ section {
 }
 
 section > div:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
   background-color: rgba(0, 0, 0, 0.33);
   font-family: Norse-Bold;
   font-size: 3.33rem;
@@ -234,9 +239,12 @@ input[type="password"][aria-invalid="true"] {
     width: 100vw;
     height: 100%;
   }
-  section > div:first-child {
+
+  .logo-container {
     position: initial;
+    width: min(100%, 500px);
   }
+
   section .bg-image {
     position: absolute;
     top: 0;
