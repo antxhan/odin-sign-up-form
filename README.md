@@ -2,5 +2,6 @@
 
 # To-Do
 
-- [ ] fix: mobile view.
-- [ ] fix: remove form shadow showing at the top.
+All done.
+
+- [ ] refactor: clean up.
